@@ -1,0 +1,80 @@
+
+    /* Basic styling for the UI */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    #container {
+      margin: 20px auto;
+      /* width: 50rem; */
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .input-container{
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      margin: 2rem;
+    }
+    .input-container-radio{
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 2rem;
+    }
+    input[type="number"]{
+      height: 2rem;
+      width: 12rem;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+
+    input[type=radio] {
+      display: none;
+    }
+
+    input[type=radio]:checked ~ label {
+      background-color: #f1592a;
+    }
+
+    .input-container-radio label {
+      display: inline-block;
+      width:8em;
+      background-color: #42b4d6;
+      border-radius: 6px;
+      color: #ffffff;
+      padding: 0.5em;
+      cursor: pointer;
+    }
+   .unit-item{
+      margin-left: 10px;
+    }
+
+    #result{
+      margin-top: 4rem;
+      font-size: larger;
+    }
+
+    
+    #convert{
+      width: 8rem;
+      height: 3rem;
+      border: 2px;
+      background-color: #42b4d6;
+      color: white;
+      font-size: larger;
+      border-radius: 10px;
+    }
+
+    #convert:hover{
+      background-color: #f1592a;
+      
+    
+    }
+
+
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Length Converter</title>
+  <link rel="stylesheet" href="converterstyle.css">
+  </head>
+<body>
+  <div id="container">
+    <h1>Length Converter</h1>
+
+    <div class="input-container" Align="center"> 
+    <label for="length">Length (in meters):</label>
+    <input type="number" id="length" placeholder="Enter length">
+  </div>
+  <label for="unit">Select unit:</label>
+    <div class="input-container-radio">
+      <span class="unit-item"><input name="unit" type="radio" id="km" value="km"><label for="km">Kilometers (km)</label></span>
+    <span class="unit-item"><input name="unit" type="radio" id="cm"  value="cm"><label for="cm">Centimeters (cm)</label></span>
+  <span class="unit-item"><input name="unit" type="radio" id="mm" value="mm"><label for="mm">Millimeters (mm)</label></span>
+  </div>
+
+    <button id="convert">Convert</button>
+    <br>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById("convert").addEventListener("click", function() {
+      // Get user input and selected unit
+      const lengthInMeters = parseFloat(document.getElementById("length").value);
+      const selectedUnit = document.getElementsByName("unit");
+      let unit=null;
+      for (i = 0; i < selectedUnit.length; i++) {
+                if (selectedUnit[i].checked){
+                    unit=selectedUnit[i].value;
+                 break;   
+                }
+                  
+            }
+          
+      console.log(lengthInMeters,unit,selectedUnit.length)
+      // Perform the conversion
+      let convertedLength;
+      switch (unit) {
+        case "cm":
+          convertedLength = lengthInMeters * 100;
+          break;
+        case "km":
+          convertedLength = lengthInMeters / 1000;
+          break;
+        case "mm":
+          convertedLength = lengthInMeters * 1000;
+          break;
+        default:
+          convertedLength = "Invalid unit";
+          break;
+      }
+
+      // Display the result
+      if (!isNaN(convertedLength)) {
+        document.getElementById("result").textContent = `Converted length: ${convertedLength} ${unit}`;
+      } else {
+        document.getElementById("result").textContent = "Invalid input or unit.";
+      }
+    });
+  </script>
+</body>
+</html>

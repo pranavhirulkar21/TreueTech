@@ -1,0 +1,63 @@
+/* Style the gallery container */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Style the thumbnail images */
+.thumbnails img {
+    max-width: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Style the lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 10%;
+}
+
+.caption {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.close-btn {
+    color: #fff;
+    font-size: 36px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.prev, .next {
+    color: #fff;
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}

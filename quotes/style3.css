@@ -1,0 +1,59 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+/* Style the testimonial section */
+.testimonial {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.testimonial-text {
+    flex: 2;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+blockquote {
+    font-size: 18px;
+    color: #555;
+}
+
+cite {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #777;
+}
+
+.testimonial-image {
+    flex: 1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}

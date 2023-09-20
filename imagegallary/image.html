@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="imagestyle.css">
+    <title>Responsive Image Gallery</title>
+</head>
+<body>
+    <div>
+        <h1 Align="center" style="margin-bottom: 0.5rem;">Photo Gallery</h1>
+    </div>
+    <div class="gallery">
+        <div class="thumbnails">
+            <img src="images/1.jpg" alt="Image 1">
+            <img src="images/2.jpg" alt="Image 2">
+            <img src="images/3.jpg" alt="Image 3">
+            <img src="images/4.jpg" alt="Image 4">
+            <img src="images/5.jpg" alt="Image 5">
+            <img src="images/6.jpg" alt="Image 6">
+            <img src="images/7.jpg" alt="Image 7">
+            <img src="images/8.jpg" alt="Image 8">
+            <img src="images/9.jpg" alt="Image 9">
+            <!-- Add more thumbnail images as needed -->
+        </div>
+        <div class="lightbox">
+            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+            <img src="images/1.jpg" alt="Image 1">
+            <div class="caption">Caption for Image 1</div>
+            <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+            <a class="next" onclick="changeImage(1)">&#10095;</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
